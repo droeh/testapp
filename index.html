@@ -90,6 +90,13 @@
     <section>
       <a href="data:text/html,%3Ch1%3EData%20test!%3C%2Fh1%3E">Data: link</a>
     </section>
+
+    <section>
+      <script type="text/javascript">
+        var blob = new Blob(["<h1>Blob test!</h1>"], {type: "text/html"});
+	document.write('<a href="' + URL.createObjectURL(blob) + '">Blob: link</a>');
+      </script>
+    </section>
   </body>
 
   <script type="text/javascript">
